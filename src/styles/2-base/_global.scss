@@ -14,12 +14,13 @@ body {
 	background-size: cover;
 	background-position: center;
 }
+.container {
+	max-width: 80%;
+	margin: 0 auto;
+}
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
 	width: 100%;
-	padding: 20px 100px;
+	padding-top: 20px;
 	background: transparent;
 	display: flex;
 	justify-content: space-between;
@@ -33,6 +34,9 @@ body {
 	font-weight: 700;
 }
 
+#navigation {
+	display: none;
+}
 .navbar a {
 	position: relative;
 	font-size: 18px;
@@ -40,10 +44,6 @@ body {
 	font-weight: 500;
 	text-decoration: none;
 	margin-left: 40px;
-
-	&:hover::before {
-		width: 100%;
-	}
 
 	&::before {
 		content: '';
@@ -54,5 +54,9 @@ body {
 		height: 2px;
 		background: #fff;
 		transition: 0.3s;
+	}
+
+	&:hover::before {
+		width: 100%;
 	}
 }
