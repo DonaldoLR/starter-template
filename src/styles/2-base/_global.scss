@@ -33,9 +33,13 @@ body {
 	text-decoration: none;
 	font-weight: 700;
 }
-
-#navigation {
-	display: none;
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #000;
 }
 .navbar a {
 	position: relative;
@@ -58,5 +62,13 @@ body {
 
 	&:hover::before {
 		width: 100%;
+	}
+}
+
+#navigation {
+	display: none;
+
+	&.active {
+		display: grid;
 	}
 }
