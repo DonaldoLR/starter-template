@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
+h1 {
+	font-size: 2.986rem;
+}
+h2 {
+	font-size: 2.488rem;
+}
+h3 {
+	font-size: 2.074rem;
+}
+h4 {
+	font-size: 1.728rem;
+}
+h5 {
+	font-size: 1.44rem;
+}
+h6 {
+	font-size: 1.2rem;
+}
+p,
+a {
+	font-size: 1rem;
+}
 *,
 a {
 	margin: 0;
@@ -17,58 +38,4 @@ body {
 .container {
 	max-width: 80%;
 	margin: 0 auto;
-}
-.header {
-	width: 100%;
-	padding-top: 20px;
-	background: transparent;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.logo {
-	font-size: 32px;
-	color: #fff;
-	text-decoration: none;
-	font-weight: 700;
-}
-.navbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: #000;
-}
-.navbar a {
-	position: relative;
-	font-size: 18px;
-	color: #fff;
-	font-weight: 500;
-	text-decoration: none;
-	margin-left: 40px;
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 0;
-		height: 2px;
-		background: #fff;
-		transition: 0.3s;
-	}
-
-	&:hover::before {
-		width: 100%;
-	}
-}
-
-#navigation {
-	display: none;
-
-	&.active {
-		display: grid;
-	}
 }
