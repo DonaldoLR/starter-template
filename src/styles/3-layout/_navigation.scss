@@ -13,14 +13,14 @@
 	text-decoration: none;
 	font-weight: 700;
 }
-.navbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: #000;
-}
+// .navbar {
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	height: 100%;
+// 	width: 100%;
+// 	background: #000;
+// }
 .navbar a {
 	position: relative;
 	font-size: 2rem;
@@ -32,6 +32,7 @@
 	position: absolute;
 	top: 20px;
 	right: 20px;
+	z-index: 1;
 }
 #navigation {
 	display: none;
@@ -44,9 +45,11 @@
 		transform: translate(-50%, -50%);
 		list-style: none;
 		text-align: center;
-		& li {
-			margin: 30% 0;
-		}
+		background-color: #000;
+		height: 100%;
+		width: 100%;
+		align-items: center;
+		align-content: space-evenly;
 	}
 }
 
