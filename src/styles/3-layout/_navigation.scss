@@ -2,7 +2,7 @@
 	width: 100%;
 	padding-top: 20px;
 	background: transparent;
-	display: flex;
+	display: grid;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -21,7 +21,7 @@
 // 	width: 100%;
 // 	background: #000;
 // }
-.navbar a {
+nav a {
 	position: relative;
 	font-size: 2rem;
 	color: #fff;
@@ -36,7 +36,9 @@
 }
 #navigation {
 	display: none;
-
+	li {
+		list-style: none;
+	}
 	&.active {
 		display: grid;
 		position: absolute;
@@ -54,21 +56,39 @@
 }
 
 @media screen and (min-width: $breakpoint-tablet) {
-	.navbar a {
-		margin-left: 40px;
-		&::before {
-			content: '';
-			position: absolute;
-			top: 100%;
-			left: 0;
-			width: 0;
-			height: 2px;
-			background: #fff;
-			transition: 0.3s;
-		}
+	header {
+		grid-template-columns: 1fr 1fr;
+	}
+	nav {
+		display: block;
+		a {
+			margin-left: 40px;
+			font-size: 1rem;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background: #fff;
+				transition: 0.3s;
+			}
 
-		&:hover::before {
-			width: 100%;
+			&:hover::before {
+				width: 100%;
+			}
+		}
+	}
+	#hamburger-menu-button {
+		display: none;
+	}
+	#navigation {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+
+		li {
+			display: flex;
 		}
 	}
 }
