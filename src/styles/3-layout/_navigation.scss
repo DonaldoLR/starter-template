@@ -1,38 +1,30 @@
 .header {
-	width: 100%;
-	padding-top: 20px;
-	background: transparent;
 	display: grid;
 	justify-content: space-between;
 	align-items: center;
+	width: 100%;
+	padding-top: 20px;
+	background: transparent;
 }
 
 .logo {
 	font-size: 32px;
+	font-weight: 700;
 	color: #fff;
 	text-decoration: none;
-	font-weight: 700;
 }
-// .navbar {
-// 	position: fixed;
-// 	top: 0;
-// 	left: 0;
-// 	height: 100%;
-// 	width: 100%;
-// 	background: #000;
-// }
 nav a {
 	position: relative;
 	font-size: 2rem;
-	color: #fff;
 	font-weight: 500;
+	color: #fff;
 	text-decoration: none;
 }
 #hamburger-menu-button {
 	position: absolute;
+	z-index: 1;
 	top: 20px;
 	right: 20px;
-	z-index: 1;
 }
 #navigation {
 	display: none;
@@ -41,17 +33,17 @@ nav a {
 	}
 	&.active {
 		display: grid;
+		align-items: center;
+		align-content: space-evenly;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		list-style: none;
-		text-align: center;
-		background-color: #000;
-		height: 100%;
 		width: 100%;
-		align-items: center;
-		align-content: space-evenly;
+		height: 100%;
+		background-color: #000;
+		text-align: center;
+		list-style: none;
 	}
 }
 
@@ -71,8 +63,8 @@ nav a {
 				left: 0;
 				width: 0;
 				height: 2px;
-				background: #fff;
 				transition: 0.3s;
+				background: #fff;
 			}
 
 			&:hover::before {
@@ -86,7 +78,6 @@ nav a {
 	#navigation {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
-
 		li {
 			display: flex;
 		}
